@@ -50,6 +50,32 @@ const result = char('hello', 10);
 // Returns: { valid: true } or { valid: false, reason: "Input exceeds character limit." }
 ```
 
+### Space Validations 🔍
+
+#### Edge Space Validation
+```javascript
+const { edgeSpace } = require('validis');
+const result = edgeSpace('hello');  // ✅ Valid
+const result2 = edgeSpace(' hello'); // ❌ Invalid
+// Returns: { valid: true } or { valid: false, reason: "No edge spaces allowed." }
+```
+
+#### No Spaces Validation
+```javascript
+const { noSpaces } = require('validis');
+const result = noSpaces('hello');    // ✅ Valid
+const result2 = noSpaces('hello world'); // ❌ Invalid
+// Returns: { valid: true } or { valid: false, reason: "No spaces allowed." }
+```
+
+#### Blank Check Validation
+```javascript
+const { blank } = require('validis');
+const result = blank('hello');  // ✅ Valid
+const result2 = blank('   ');   // ❌ Invalid
+// Returns: { valid: true } or { valid: false, reason: "Cannot be blank." }
+```
+
 ### Password Validations 🔒
 
 #### Strong Password Validation
@@ -111,6 +137,11 @@ const result = isUpper('HELLO');
 - ✉️ **email(email: string)**: Validates email format using regex
 - 📱 **phone(phone: string)**: Validates phone numbers (10-15 digits, optional '+' prefix)
 - 📝 **char(input: string, limit: number)**: Checks if string length is within limit
+
+### Space Validations
+- 🔍 **edgeSpace(str: string)**: Checks for no leading or trailing spaces
+- 🚫 **noSpaces(str: string)**: Ensures string contains no spaces
+- ⚡ **blank(str: string)**: Validates that string is not entirely whitespace
 
 ### Password Validations
 - 🔒 **pass(password: string)**: Validates password strength (uppercase, lowercase, numbers, symbols)
