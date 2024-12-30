@@ -1,0 +1,16 @@
+{
+  "name": "validis",
+  "version": "1.0.5",
+  "description": "Validation made simple! 🚀 This package gives you all the tools you need to quickly and effortlessly validate emails, phone numbers, passwords, character limits, and more. Whether you’re checking for a positive number, enforcing a specific range, or customizing your validation rules, this toolkit has got your back. Perfect for anyone looking to build reliable and user-friendly applications! 🌟",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "validate",
+    "validify",
+    "validations"
+  ],
+  "author": "Kriparaj.P",
+  "license": "ISC"
+}
