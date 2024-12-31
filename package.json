@@ -9,8 +9,12 @@
   "keywords": [
     "validate",
     "validify",
-    "validations"
+    "validations",
+    "validis"
   ],
   "author": "Kriparaj.P",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "validis": "file:"
+  }
 }
