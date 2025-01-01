@@ -92,6 +92,13 @@ const result = minLen('hello', 5);
 // Returns: { valid: true } or { valid: false, reason: "Input does not meet minimum length." }
 ```
 
+#### Minimum Length Validation
+```javascript
+const { match } = require('validis');
+const result = match('password@123', 'password@123');
+// Returns: { valid: true } or { valid: false, reason: "Password does not match!" }
+```
+
 ### Number Validations 🔢
 
 #### Positive Number Validation
