@@ -198,7 +198,19 @@ This package was created with ❤️ by **Kriparaj P**.
 
 <div align="center">
 
-⭐ If you found this project helpful, please consider giving it a star! ⭐
+## ⭐ Give Validis a Star!
+
+If you find **Validis** helpful, consider **starring** the repository! ⭐  
+
+[![GitHub stars](https://img.shields.io/github/stars/kriparajp1/validis.svg?style=social)](https://github.com/kriparajp1/validis/stargazers)  
+
+Your support helps us improve and maintain the project! 🚀
+## ⭐ Starred by Amazing Developers  
+
+Thanks to everyone who has starred **Validis**! 🌟  
+
+[![Stargazers](https://reporoster.com/stars/dark/kriparajp1/validis)](https://github.com/kriparajp1/validis/stargazers)  
+
 
 Made with ❤️ by Kriparaj P
 
