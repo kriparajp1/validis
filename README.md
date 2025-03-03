@@ -4,6 +4,7 @@
 [![Downloads](https://img.shields.io/npm/dm/validis.svg)](https://www.npmjs.com/package/validis)
 [![License](https://img.shields.io/npm/l/validis.svg)](https://github.com/kriparajp1/validis/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/kriparajp1/validis/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/kriparajp1/validis.svg?style=social)](https://github.com/kriparajp1/validis/stargazers)
 
 > Your go-to solution for simple and customizable form validations ✨
 
