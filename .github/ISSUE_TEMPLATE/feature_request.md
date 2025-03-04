@@ -1,20 +1,19 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+name: "✨ Feature Request"
+about: "Suggest an idea for Validis"
+title: "[Feature] <title>"
+labels: "enhancement"
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## 🚀 Feature Request
+Describe the feature you'd like to see in Validis.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## 🔍 Why is this feature needed?
+Explain why this feature is important and how it improves the project.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## 📌 Possible Implementation
+Provide a rough idea or steps on how this can be implemented.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## 📝 Additional Context
+Add any other relevant details or examples here.
