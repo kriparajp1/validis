@@ -26,6 +26,8 @@
 npm install validis
 ```
 
+# 📘 Validis API Reference
+
 ## 🎯 Usage
 
 ### Basic Validations 📝
@@ -139,6 +141,31 @@ const result = isUpper('HELLO');
 // Returns: { valid: true } or { valid: false, reason: "String is not fully uppercase." }
 ```
 
+### OTP Generation & Validation 🔢🔠
+
+Validis also includes an OTP generator with different types of OTPs.
+
+#### Generate Numeric OTP
+```javascript
+const { numOtp } = require('validis');
+const otp = numOtp(6);
+// Returns: "123456" (Random 6-digit numeric OTP)
+```
+
+#### Generate Alphabet OTP
+```javascript
+const { alphabetOtp } = require('validis');
+const otp = alphabetOtp(6);
+// Returns: "ABCDEF" (Random 6-character alphabet OTP)
+```
+
+#### Generate Mixed OTP
+```javascript
+const { mixedOtp } = require('validis');
+const otp = mixedOtp(6);
+// Returns: "A1B2C3" (Random 6-character alphanumeric OTP)
+```
+
 ## 🛠️ API Reference
 
 ### Basic Validations
@@ -164,6 +191,11 @@ const result = isUpper('HELLO');
 - 📝 **isLower(input: string)**: Validates if string is fully lowercase
 - 📝 **isUpper(input: string)**: Validates if string is fully uppercase
 
+### OTP Generation & Validation
+- 🔢 **numOtp(length: number)**: Generates a numeric OTP of the specified length
+- 🔠 **alphabetOtp(length: number)**: Generates an alphabetic OTP of the specified length
+- 🔀 **mixedOtp(length: number)**: Generates an alphanumeric OTP of the specified length
+
 ## 🔍 Return Values
 
 All validation functions return an object with the following structure:
@@ -174,6 +206,8 @@ All validation functions return an object with the following structure:
   reasons?: string[]; // Multiple reasons (password validation)
 }
 ```
+
+
 
 ## 🤝 Contributing
 

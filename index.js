@@ -3,6 +3,7 @@ const passwordValidations = require('./Validations/passwordValidations');
 const numberValidations = require('./Validations/numberValidations');
 const textCaseValidations = require('./Validations/textCaseValidations');
 const whiteSpaceValidations = require("./Validations/whiteSpaceValidation");
+const otpGenerator = require("./Validations/otpGenerator")
 
 
 module.exports = {
@@ -10,5 +11,6 @@ module.exports = {
   ...passwordValidations,
   ...numberValidations,
   ...textCaseValidations,
-  ...whiteSpaceValidations
+  ...whiteSpaceValidations,
+  ...otpGenerator
 };
