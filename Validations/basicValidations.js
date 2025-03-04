@@ -8,15 +8,18 @@ const email = (email) => {
     return emailRegex.test(email) ? { valid: true } : { valid: false, reason: "Invalid email format." };
   };
   
-  /**
-   * Validates a phone number using a regular expression.
-   * @param {string} phone - Phone number to validate.
-   * @returns {Object} - Returns an object with validation result and reason if invalid.
-   */
-  const phone = (phone) => {
-    const phoneRegex = /^\+?\d{10,15}$/;
-    return phoneRegex.test(phone) ? { valid: true } : { valid: false, reason: "Invalid phone number format." };
-  };
+ /**
+ * Validates a phone number using an improved regular expression.
+ * Supports a broader range of valid numbers, including short codes.
+ * @param {string} phone - Phone number to validate.
+ * @returns {Object} - Returns an object with validation result and reason if invalid.
+ */
+const phone = (phone) => {
+  const phoneRegex = /^(\+?\d{1,4})?(\d{4,15})$/; // Allows country codes + national formats
+  return phoneRegex.test(phone)
+    ? { valid: true }
+    : { valid: false, reason: "Invalid phone number format." };
+};
   
   /**
    * Validates character limit.
