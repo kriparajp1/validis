@@ -11,6 +11,15 @@ const otpGenerator = require('./Validations/otpGenerator');
 
 // Import schema-based validation classes from Validations folder
 const {
+  // New shorter names
+  BasicSchema,
+  NumSchema,
+  PassSchema,
+  TextSchema,
+  SpaceSchema,
+  OtpSchema,
+  
+  // Old names for backward compatibility
   BasicValidationsSchema,
   NumberValidationsSchema,
   PasswordValidationsSchema,
@@ -29,7 +38,15 @@ module.exports = {
   ObjectSchema,
   ArraySchema,
   
-  // Schema-based validation classes from Validations folder
+  // Schema-based validation classes from Validations folder (new shorter names)
+  BasicSchema,
+  NumSchema,
+  PassSchema,
+  TextSchema,
+  SpaceSchema,
+  OtpSchema,
+  
+  // Schema-based validation classes from Validations folder (old names for backward compatibility)
   BasicValidationsSchema,
   NumberValidationsSchema,
   PasswordValidationsSchema,

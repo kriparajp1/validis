@@ -3,17 +3,18 @@
  */
 
 const {
-  BasicValidationsSchema,
-  NumberValidationsSchema,
-  PasswordValidationsSchema,
-  TextCaseValidationsSchema,
-  WhiteSpaceValidationSchema,
-  OtpGeneratorSchema
+  // Using the new shorter class names
+  BasicSchema,
+  NumSchema,
+  PassSchema,
+  TextSchema,
+  SpaceSchema,
+  OtpSchema
 } = require('../Validations');
 
 // Example 1: Basic Validations
 console.log('\n--- Basic Validations Example ---');
-const basicValidator = new BasicValidationsSchema();
+const basicValidator = new BasicSchema();
 
 // Chain multiple validations
 basicValidator.email().char(50);
@@ -28,7 +29,7 @@ console.log('Invalid email validation result:', invalidEmailResult);
 
 // Example 2: Number Validations
 console.log('\n--- Number Validations Example ---');
-const numberValidator = new NumberValidationsSchema();
+const numberValidator = new NumSchema();
 
 // Chain validations
 numberValidator.num().range(10, 100);
@@ -43,7 +44,7 @@ console.log('Invalid number validation result:', invalidNumberResult);
 
 // Example 3: Password Validations
 console.log('\n--- Password Validations Example ---');
-const passwordValidator = new PasswordValidationsSchema();
+const passwordValidator = new PassSchema();
 
 // Chain validations
 passwordValidator.minLen(8).pass();
@@ -64,7 +65,7 @@ console.log('Invalid password validation result:', invalidPasswordResult);
 
 // Example 4: Text Case Validations
 console.log('\n--- Text Case Validations Example ---');
-const textCaseValidator = new TextCaseValidationsSchema();
+const textCaseValidator = new TextSchema();
 
 // Chain validations
 textCaseValidator.firstUpper().isUpper();
@@ -79,7 +80,7 @@ console.log('Invalid text case validation result:', invalidTextResult);
 
 // Example 5: White Space Validations
 console.log('\n--- White Space Validations Example ---');
-const whiteSpaceValidator = new WhiteSpaceValidationSchema();
+const whiteSpaceValidator = new SpaceSchema();
 
 // Chain validations
 whiteSpaceValidator.edgeSpace().blank();
@@ -94,7 +95,7 @@ console.log('Invalid white space validation result:', invalidWhiteSpaceResult);
 
 // Example 6: OTP Generator
 console.log('\n--- OTP Generator Example ---');
-const otpGenerator = new OtpGeneratorSchema();
+const otpGenerator = new OtpSchema();
 
 // Configure OTP generator
 otpGenerator.setLength(8).setType('mixed');

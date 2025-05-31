@@ -52,47 +52,58 @@ const arrayResult = arraySchema.parse(['apple', 'banana', 'cherry']);
 
 ### Validation Schema Classes
 
-Validis now provides class-based implementations of all validation modules with a chainable API:
+Validis now provides class-based implementations of all validation modules with a chainable API. We've introduced shorter, more user-friendly class names while maintaining backward compatibility with the original names:
 
 ```javascript
+// Using the new shorter class names
 const { 
-  BasicValidationsSchema,
-  NumberValidationsSchema,
-  PasswordValidationsSchema,
-  TextCaseValidationsSchema,
-  WhiteSpaceValidationSchema,
-  OtpGeneratorSchema 
+  BasicSchema,
+  NumSchema,
+  PassSchema,
+  TextSchema,
+  SpaceSchema,
+  OtpSchema 
 } = require('validis');
 
 // Basic validations
-const basicValidator = new BasicValidationsSchema();
+const basicValidator = new BasicSchema();
 basicValidator.email().char(50);
 const emailResult = basicValidator.validate('example@example.com');
 
+// The original class names are still supported for backward compatibility
+// const { 
+//   BasicValidationsSchema,  // Same as BasicSchema
+//   NumberValidationsSchema, // Same as NumSchema
+//   PasswordValidationsSchema, // Same as PassSchema
+//   TextCaseValidationsSchema, // Same as TextSchema
+//   WhiteSpaceValidationSchema, // Same as SpaceSchema
+//   OtpGeneratorSchema  // Same as OtpSchema
+// } = require('validis');
+
 // Number validations
-const numberValidator = new NumberValidationsSchema();
+const numberValidator = new NumSchema();
 numberValidator.num().range(10, 100);
 const numberResult = numberValidator.validate(50);
 
 // Password validations
-const passwordValidator = new PasswordValidationsSchema();
+const passwordValidator = new PassSchema();
 passwordValidator.minLen(8).pass();
 passwordValidator.setCompareValue('Password123!');
 passwordValidator.match();
 const passwordResult = passwordValidator.validate('Password123!');
 
 // Text case validations
-const textCaseValidator = new TextCaseValidationsSchema();
+const textCaseValidator = new TextSchema();
 textCaseValidator.firstUpper().isUpper();
 const textResult = textCaseValidator.validate('HELLO');
 
 // White space validations
-const whiteSpaceValidator = new WhiteSpaceValidationSchema();
+const whiteSpaceValidator = new SpaceSchema();
 whiteSpaceValidator.edgeSpace().blank();
 const whiteSpaceResult = whiteSpaceValidator.validate('Hello World');
 
 // OTP generator
-const otpGenerator = new OtpGeneratorSchema();
+const otpGenerator = new OtpSchema();
 otpGenerator.setLength(8).setType('mixed');
 const mixedOtp = otpGenerator.generate();
 // Or use shorthand methods
@@ -256,12 +267,12 @@ Each validation function returns an object with the following structure:
 - `isLower()` - Lowercase validation
 - `isUpper()` - Uppercase validation
 
-### White Space Validation Schema
+### Space Schema
 - `edgeSpace()` - No leading/trailing whitespace validation
 - `noSpaces()` - No whitespace validation
 - `blank()` - Non-blank validation
 
-### OTP Generator Schema
+### OTP Schema
 - `setLength(length)` - Set OTP length
 - `setType(type)` - Set OTP type ('mixed', 'numeric', 'alphabetic')
 - `generate()` - Generate OTP
